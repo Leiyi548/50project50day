@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box-sizing-example</title>
+    <style>
+      div.container {
+        width: 30em;
+        border: 1em solid pink;
+        background-color: green;
+      }
+
+      div.box {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box; /* Support Firefox */
+        -webkit-box-sizing: border-box; /* Support Safari */
+        width: 50%;
+        border: 1em solid red;
+        float: left;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">这个 div 占据左半部分。</div>
+      <div class="box">这个 div 占据左半部分。</div>
+    </div>
+  </body>
+</html>

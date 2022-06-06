@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* 导入需要的资源 */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  /* 把边框也算入宽度和高度 */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  /* 设置是flex容器，默认是方向是row */
+  display: flex;
+  align-items: center;
+  /* 纵向方向 */
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  /* 缩放图片以完全装入背景区 */
+  /* background-size: contain; */
+  /* 缩放图片完全覆盖背景图 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  /* 因为这个.panel没有设置宽度，所以flex是用来分剩下的空间，这样来实现控制宽度 */
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  /* 所有属性 在700ms 发生变化 动画效果是 ease-in */
+  transition: all 700ms linear;
+}
+
+.panel h3 {
+  font-size: 24px;
+  /* 子绝父相 */
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  /* 透明 */
+  opacity: 0;
+}
+
+.panel.active {
+  /* 分的更多的空间 */
+  /* 相当与 5 / 0.5 = 10 倍宽度 */
+  flex: 5;
+}
+
+.panel.active h3 {
+  /* 现身 */
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+/* 设置手机设备最大宽度为480px */
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  /* 第三个第四个元素不显示 */
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
