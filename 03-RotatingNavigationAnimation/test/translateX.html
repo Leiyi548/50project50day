@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>translateX</title>
+    <style>
+      .box1 {
+        background-color: pink;
+        width: 100px;
+        height: 100px;
+        transform: rotate(20deg);
+        transition-delay: 0.3s;
+      }
+
+      .box2 {
+        background-color: green;
+        width: 100px;
+        height: 100px;
+        transform: translateX(10px);
+        transition-delay: 2s;
+        overflow-x: hidden;
+      }
+
+      li {
+        transform: translateX(-100%);
+        transition-delay: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">rotate(20deg)设置了就立马生效</div>
+    <div class="box2">translateX(-100%)直接看不到不见了</div>
+
+    <ul>
+      <li>1</li>
+      <li>1</li>
+      <li>1</li>
+    </ul>
+  </body>
+</html>

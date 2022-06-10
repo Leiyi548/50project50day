@@ -28,6 +28,7 @@ body {
 
 /* 向右上20度旋转 */
 .container.show-nav {
+  /* 让container翻转 */
   transform: rotate(-20deg);
 }
 
@@ -37,9 +38,7 @@ body {
   /* 为了实现半圆图案 */
   top: -100px;
   left: -100px;
-  /* top: 0px;
-  left: 0px;
-  background-color: pink; */
+  /* background-color: pink; */
 }
 
 .circle {
@@ -90,12 +89,16 @@ body {
   transform-origin: top left;
 }
 
+/* 设定后面出现的动画知道nav li生效 */
 .container.show-nav + nav li {
+  /* 像右移动 */
   transform: translateX(0);
+  /* 延迟时间 0.3s */
   transition-delay: 0.3s;
 }
 
 .content img {
+  /* 最大宽度为content的宽度 */
   max-width: 100%;
 }
 
@@ -120,10 +123,11 @@ body {
 }
 
 nav {
+  /* 固定定位 */
   position: fixed;
   bottom: 40px;
   left: 0;
-  z-index: 100;
+  /* z-index: 100; */
   /* background-color: green; */
 }
 
@@ -134,6 +138,13 @@ nav ul {
   /* background-color: pink; */
 }
 
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* 设置3个li */
+/* 第一个li */
 nav ul li {
   /* 将字体大小 */
   text-transform: uppercase;
@@ -143,16 +154,13 @@ nav ul li {
   transition: transform 0.4s ease-in;
 }
 
-nav ul li i {
-  font-size: 20px;
-  margin-right: 10px;
-}
-
+/* 第二个li */
 nav ul li + li {
   margin-left: 15px;
   transform: translateX(-150%);
 }
 
+/* 第三个li */
 nav ul li + li + li {
   margin-left: 30px;
   transform: translateX(-200%);
