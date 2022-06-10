@@ -1,0 +1,170 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #333;
+  color: #222;
+  /* overflow-x: hidden; */
+  margin: 0;
+}
+
+.container {
+  background-color: #fafafa;
+  /* background-color: pink; */
+  /* 设置动画原始位置左上 */
+  transform-origin: top left;
+  /* 设置动画 */
+  transition: transform 0.5s linear;
+  width: 100vw;
+  /* 这个没啥用 */
+  min-height: 100vh;
+  padding: 50px;
+}
+
+/* 向右上20度旋转 */
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  /* 固定位置一直在页面左上角 */
+  position: fixed;
+  /* 为了实现半圆图案 */
+  top: -100px;
+  left: -100px;
+  /* top: 0px;
+  left: 0px;
+  background-color: pink; */
+}
+
+.circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  /* 让他看起来像一个圆 */
+  border-radius: 50%;
+  /* 为子绝父相做准备 */
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  /* 设置光标 */
+  cursor: pointer;
+  /* 子绝父相 */
+  position: absolute;
+  /* 让它出现在中间的位置 */
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  /* 设置背景透明 */
+  background: transparent;
+  /* 取消边框button默认是有边框 */
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  /* 设置旋转动画 */
+  transform: rotate(90deg);
+  /* 设置旋转原始位置为左上角 */
+  transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.content img {
+  max-width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+/* h1是有固定的margin */
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+  /* background-color: green; */
+}
+
+nav ul {
+  /* 取消ul圆点 */
+  list-style-type: none;
+  padding-left: 30px;
+  /* background-color: pink; */
+}
+
+nav ul li {
+  /* 将字体大小 */
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+nav a {
+  color: #fafafa;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: #ff7979;
+  font-weight: bold;
+}

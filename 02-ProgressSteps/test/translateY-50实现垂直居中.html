@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>translateY-50实现垂直居中</title>
+    <style>
+      .container {
+        width: 960px;
+        height: 500px;
+        margin: 0 auto;
+        background-color: pink;
+      }
+
+      .container p {
+        background-color: #fff;
+        /* 默认以父级的原始点进行定位，也就是左上角，top：50%就是父级的高度50% */
+        position: relative;
+        /* 只在垂直方向移动 */
+        left: 0;
+        /* 因为top：50% 是以左上角为基础，所以我们移动 top：50%是不会居中的，还要减去一半我们现在这个元素的高度 */
+        top: 50%;
+        /* 用这个减去我们现在元素一半的高度 */
+        transform: translateY(-50%);
+        /* 让这个p元素出现在中间 */
+        margin: 0 auto;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>垂直居中内容</p>
+    </div>
+  </body>
+</html>
