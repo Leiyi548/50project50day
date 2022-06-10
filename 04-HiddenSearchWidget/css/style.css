@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #765bed;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  /* 取消默认margin，让他没有上下滚轮 */
+  margin: 0;
+}
+
+.search {
+  height: 50px;
+  position: relative;
+}
+
+.search .input {
+  background-color: #fff;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  border: 0;
+  transition: 50px 0.3s ease;
+}
+
+.btn {
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  /* 决定iconfont大小 */
+  font-size: 24px;
+  top: 0;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.btn:focus,
+.input:focus {
+  /* 取消聚焦时候的边框 */
+  outline: none;
+}
+
+.search.active .input {
+  width: 200px;
+}
+
+.search.active .btn {
+  transform: translateX(200px);
+}

@@ -7,3 +7,5 @@
 ## 打卡
 
 - [x] 01-Expanding Cards (2022-6-6)
+- [x] 02-ProgressSteps (2022-6-7)
+- [x] 03-HiddenSearch (2022-6-10)
