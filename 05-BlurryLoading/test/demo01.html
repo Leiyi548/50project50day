@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo01</title>
+    <style>
+      .box1 {
+        background-color: pink;
+        width: 100px;
+        height: 100px;
+        color: #fff;
+      }
+      .box2 {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+      }
+      .box3 {
+        background-color: greenyellow;
+        width: 100px;
+        height: 100px;
+      }
+      .text-center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      // load in begin
+      window.onload = function () {
+        var oImg = document.createElement('img')
+        oImg.className = 'pic'
+        oImg.src = '../img/image.avif'
+        oImg.style.border = '1px solid silver'
+        document.body.appendChild(oImg)
+      }
+      const app = document.getElementById('app')
+      var div1 = document.createElement('div')
+      div1.className = 'box1 text-center'
+      // div1.className = 'text-center'
+      div1.innerText = 'test'
+      var div2 = document.createElement('div')
+      div2.className = 'box2'
+      var div3 = document.createElement('div')
+      div3.className = 'box3'
+      app.appendChild(div1)
+      app.appendChild(div2)
+      app.appendChild(div3)
+    </script>
+  </body>
+</html>

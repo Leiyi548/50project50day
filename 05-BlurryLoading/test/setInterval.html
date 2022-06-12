@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval学习</title>
+  </head>
+  <body>
+    <p>Display current time</p>
+    <p id="demo"></p>
+    <button onclick="myClearFunction()">Stop display time</button>
+    <script>
+      // Refresh every second
+      // display current time
+      var myVar = setInterval(function () {
+        myTimer()
+      }, 1000)
+
+      function myTimer() {
+        var d = new Date()
+        var t = d.toLocaleTimeString()
+        document.getElementById('demo').innerHTML = t
+      }
+
+      function myClearFunction() {
+        clearInterval(myVar)
+      }
+    </script>
+  </body>
+</html>
