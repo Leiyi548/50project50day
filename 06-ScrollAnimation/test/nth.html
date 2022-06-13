@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nth</title>
+    <style>
+      /* 奇数段 */
+      p:nth-of-type(2n + 1) {
+        color: red;
+      }
+
+      /* 偶数段 */
+      p:nth-of-type(2n) {
+        color: blue;
+      }
+
+      /* 第一段 */
+      p:nth-of-type(1) {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>这段不参与计数。</div>
+      <p>这是第一段。</p>
+      <p>这是第二段。</p>
+      <div>这段不参与计数。</div>
+      <p>这是第三段。</p>
+      <p>这是第四段。</p>
+    </div>
+  </body>
+</html>

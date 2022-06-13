@@ -8,4 +8,6 @@
 
 - [x] 01-Expanding Cards (2022-6-6)
 - [x] 02-ProgressSteps (2022-6-7)
-- [x] 03-HiddenSearch (2022-6-10)
+- [x] 03-RotatingNavigation (2022-6-7)
+- [x] 04-HiddenSearch (2022-6-10)
+- [x] 05-BlurryLoading (2022-6-11)

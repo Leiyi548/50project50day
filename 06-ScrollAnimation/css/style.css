@@ -1,0 +1,56 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #efedd6;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  /* 设置主轴方向从上到下 */
+  /* 纵轴方向就是从左到右 */
+  flex-direction: column;
+  /* 主轴方向居中 */
+  justify-content: center;
+  /* 纵轴方向居中 */
+  align-items: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.box {
+  background-color: steelblue;
+  color: #fff;
+  /* make h2 title center */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  /* Add box shoadow */
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  /* Add animation */
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+
+/* 匹配偶数 */
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+.box h2 {
+  font-size: 45px;
+}
