@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rebeccapurple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: #fff;
+  color: rebeccapurple;
+  border-radius: 5px;
+  font-family: inherit;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+/* 点击有样式 */
+.btn:active {
+  transform: scale(0.98);
+}
+
+#toasts {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toast {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+}
+
+.toast.info {
+  color: rebeccapurple;
+}
+
+.toast.success {
+  color: green;
+}
+
+.toast.error {
+  color: red;
+}
