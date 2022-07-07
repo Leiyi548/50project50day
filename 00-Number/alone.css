@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+body {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  color: #fff;
+}
+
+.square {
+  width: 156px;
+  height: 260px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  /* transform: rotate(90deg); */
+}
+
+.small {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(54, 54, 54, 0.9);
+  border: 1px solid #000;
+  margin: 0;
+}
+
+.origin {
+  background-color: pink;
+}
+
+.light {
+  background-color: #fff;
+}
+
+.ninty {
+  transform: rotate(90deg);
+}
+
+.all {
+  transform: rotate(180deg);
+}
+
+.ts {
+  transform: rotate(270deg);
+}
+
+.sx {
+  transform: rotate(360deg);
+}
