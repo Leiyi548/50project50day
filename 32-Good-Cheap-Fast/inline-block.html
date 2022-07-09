@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>inline-block</title>
+    <style>
+      span.a {
+        display: inline; /* the default for span */
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;
+        background-color: yellow;
+      }
+
+      span.b {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;
+        background-color: yellow;
+      }
+
+      span.c {
+        display: block;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: 1px solid blue;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>display 属性</h1>
+
+    <h2>display: inline</h2>
+    <div>
+      Shanghai is one of the four direct-administered municipalities of
+      <span class="a">the People's Republic of China</span>. Welcome to
+      <span class="a">Shanghai</span>!
+    </div>
+
+    <h2>display: inline-block</h2>
+    <div>
+      Shanghai is one of the four direct-administered municipalities of
+      <span class="b">the People's Republic of China</span>. Welcome to
+      <span class="b">Shanghai</span>!
+    </div>
+
+    <h2>display: block</h2>
+    <div>
+      Shanghai is one of the four direct-administered municipalities of
+      <span class="c">the People's Republic of China</span>. Welcome to
+      <span class="c">Shanghai</span>!
+    </div>
+  </body>
+</html>

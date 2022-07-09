@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.label {
+  position: relative;
+  background-color: #d0d0d0;
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  /* 与 display: inline 相比，主要区别在于 display: inline-block 允许在元素上设置宽度和高度 */
+  display: inline-block;
+  cursor: pointer;
+}
+
+.ball {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  animation: slideOff 0.3s linear forwards;
+}
+
+#good:checked + .label {
+  background-color: #8e44ad;
+}
+
+#good:checked + .label .ball {
+  animation: slideOn 0.3s linear forwards;
+}
+
+@keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(40px) scale(1);
+  }
+}
+
+@keyframes slideOff {
+  0% {
+    transform: translateX(40px) scale(1);
+  }
+  50% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
